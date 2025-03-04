@@ -5,6 +5,7 @@ import json
 import shutil
 import sys
 import getpass
+import math
 from datetime import datetime
 import tkinter as tk
 from tkinter import scrolledtext
@@ -18,7 +19,7 @@ class ShellEmulator:
         self.log_file = "shell_log.json"
         self.log_data = []
 
-        # Распаковка виртуальной файловой системы
+        # Распаковка виртуальной файловой системы из задачи
         self.extract_fs(fs_archive)
 
         # Запуск стартового скрипта, если он задан
